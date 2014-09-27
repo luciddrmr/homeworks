@@ -16,7 +16,7 @@
   ; Probably we're done if there's no str2 left.
     (cond 
          [ (equal? str2 "") false ]
-         [ (and (equal? (string-length str1) 1) (equal? (string-ith str2 0) str1)) true ]
+         [ 
          [ else (my-string-contains? (substring str1 1 (string-length str1))
                                      (substring str2 1 (string-length str2)))])))
   
@@ -26,12 +26,12 @@
 
 ; match-from-beginning? returns true iff. all of str1 appears as the beginning of str2.
 
-
 (define match-from-beginning? (lambda (str1 str2)
        (cond [ (equal? str1 "") false]
              [ (equal? str2 "") false]
-             [ (and (equal? (string-length str1) 1)
-                (equal? (string-ith str1 0 ))) (string-ith str2 0)) true]
+             [ (and (equal? (string-length str1) 1) (equal? (string-ith str2 0) str1)) true ]
+             [ else (match-from-beginning? (substring str1 1 (string-length str1))
+                                     (substring str2 1 (string-length str2)))]))) 
 ; Separate and easier problem:
    ; What happens when str1 is one character long?  Does that make thing easier?
   
@@ -48,6 +48,38 @@
 "my-string-contains-one-char-only? test 1"
 true
 (my-string-contains-one-char-only? "a" "bccjguagjghu")
-  
+  "test 1:"
+true
+
+(my-string-contains? "y" "yabc")
+
+"test 1.b:"
+false
+(my-string-contains? "x" "yabc")
+
+"test 1.a"
+true
+(my-string-contains? "ab" "daby")
+
+"test 2:"
+false
+(my-string-contains? "ab" "cbdaxY")
+
+"test 3"
+false
+(my-string-contains? "ab" "")
+
+"test 4"
+false
+(my-string-contains? "gac"  "cdgae")
+
+"test 5"
+false
+(my-string-contains? "alfiewinnie" "alfieikawinniebalto")
+
+"test 6"
+false
+(my-string-contains? "xyz12" "abc")
+
   
   
