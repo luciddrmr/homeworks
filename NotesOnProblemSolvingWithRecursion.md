@@ -21,7 +21,7 @@ One might even call these the design patterns of simple list-based programming p
 
    * Do we need an entirely different problem solved first with its own interface / API?
 
-        * We should experiment with sub-problems that may or may not relate merely to explore the problem space.
+     * We should experiment with sub-problems that may or may not relate merely to explore the problem space.
 
    * Do we actually need to "build" the solution in a separate recursion variable (separate loop counter, etc.)
      that isn't available, necessitating a helper function (loop variable)?
