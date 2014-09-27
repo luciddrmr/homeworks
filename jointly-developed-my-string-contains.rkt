@@ -10,3 +10,13 @@
 ;      s : string
 ;      t : string
 ;   Determines whether the first string appears literally in the second one. 
+
+
+(define my-string-contains? (lambda str1 str2)
+  ; Probably we're done if there's no str2 left.
+  
+  
+;Sub problems:
+  ; we need an expression that returns true iff. the first character of string1 and string2 are equivalent.
+(equal? (substring str1 0 1) (substring str2 0 1))
+  
