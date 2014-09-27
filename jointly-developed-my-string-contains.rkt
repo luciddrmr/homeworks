@@ -14,12 +14,16 @@
 
 (define my-string-contains? (lambda (str1 str2) str1))
   ; Probably we're done if there's no str2 left.
+    (cond 
+         [ (equal? str2 "") false ]
+         [ (equal? short-string (string-ith str2 0)) true]
+         [ else (my-string-contains? short-string (substring str2 1 (string-length str2)))])))
   
-  
-;Sub problems:
+ ;Sub problems:
   ; we need an expression that returns true iff. the first character of string1 and string2 are equivalent.
 ;     (equal? (substring str1 0 1) (substring str2 0 1))
-  
+
+; match-from-beginning? returns true iff. all of str1 appears as the beginning of str2.
   
 ; Separate and easier problem:
    ; What happens when str1 is one character long?  Does that make thing easier?
