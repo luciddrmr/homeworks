@@ -13,9 +13,9 @@
 (define my-string-contains-helper (lambda (str1 str2)
         (cond  [ (equal? str2 "") false ]
          [ (equal? (string-ith str1 0) (string-ith str2 0))  
-       (cond [ (equal? "" (substring str1 1 (string-length str1)) true)]
-             [ (beginnings (substring str1 1 (string-length str1) (substring str2 1 (string-length str2))))]
-         [ else (my-string-contains-helper str1 ((substring str2 1 (string-length str2))))])])))
+       (cond [ (equal? "" (substring str1 1 (string-length str1))) true]
+             [ (beginnings (substring str1 1 (string-length str1) (substring str2 1 (string-length str2)))) "SOMERESULT"]
+         [ else (my-string-contains-helper str1 (substring str2 1 (string-length str2)))])])))
 
 (define beginnings (lambda (str1 str2) 
         (cond [ (equal? str1 "") (error "first string of beginnings cannot be empty")] 
