@@ -38,3 +38,6 @@ One might even call these the design patterns of simple list-based programming p
    
    * When you're stuck, maybe solve a narrower problem and examine its solution to see if it informs
      a solution for the main problem.
+
+
+     * Then, consider: "What's different, or more complicated, when you move to the bigger problem?"
