@@ -32,3 +32,5 @@ One might even call these the design patterns of simple list-based programming p
      the recursion?  [i.e., tail recursion]
 
    
+   * When you're stuck, maybe solve a narrower problem and examine its solution to see if it informs
+     a solution for the main problem.
