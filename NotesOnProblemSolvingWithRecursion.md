@@ -41,3 +41,4 @@ One might even call these the design patterns of simple list-based programming p
 
 
      * Then, consider: "What's different, or more complicated, when you move to the bigger problem?"
+       "Which one of our base cases becomes no longer a base case?"
