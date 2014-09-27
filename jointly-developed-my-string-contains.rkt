@@ -5,3 +5,8 @@
 ;   This is the version of my-string-contains that Carol and Bradley developed together,
 ;    applying our list of design patterns.
 
+;        (my-string-contains? s t) → boolean?
+
+;      s : string
+;      t : string
+;   Determines whether the first string appears literally in the second one. 
