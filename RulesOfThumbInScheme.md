@@ -11,3 +11,5 @@ Various Rules of Thumb that May Be Useful In Scheme
 
   * Check to make sure things are 0 based or 1 based, such as arrays, string functions, and the like.
     In Scheme and most languages, 0 base is common, but there is Pascal after all. :)
+
+  * Functions that return boolean usually have a '?' at the end of their function name.
