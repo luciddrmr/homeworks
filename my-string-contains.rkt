@@ -25,7 +25,7 @@
         (cond [ (equal? str1 "") true ]
         [ (equal? str2 "") false ]
         [ (not (equal? (string-ith str1 0) (string-ith str2 0))) false ]
-        [ else (beginnings-helper (substring str2 1  (string-length str2) (substring str2 1 (string-length str2))))])))
+        [ else (beginnings-helper (substring str2 1  (string-length str2)) (substring str2 1 (string-length str2)))])))
 
 "test beginnings 1"
 true
