@@ -12,19 +12,26 @@
 ;   Determines whether the first string appears literally in the second one. 
 
 
-(define my-string-contains? (lambda (str1 str2) str1))
+(define my-string-contains? (lambda (str1 str2)
   ; Probably we're done if there's no str2 left.
     (cond 
          [ (equal? str2 "") false ]
-         [ (equal? short-string (string-ith str2 0)) true]
-         [ else (my-string-contains? short-string (substring str2 1 (string-length str2)))])))
+         [ (and (equal? (string-length str1) 1) (equal? (string-ith str2 0) str1)) true ]
+         [ else (my-string-contains? (substring str1 1 (string-length str1))
+                                     (substring str2 1 (string-length str2)))])))
   
  ;Sub problems:
   ; we need an expression that returns true iff. the first character of string1 and string2 are equivalent.
 ;     (equal? (substring str1 0 1) (substring str2 0 1))
 
 ; match-from-beginning? returns true iff. all of str1 appears as the beginning of str2.
-  
+
+
+(define match-from-beginning? (lambda (str1 str2)
+       (cond [ (equal? str1 "") false]
+             [ (equal? str2 "") false]
+             [ (and (equal? (string-length str1) 1)
+                (equal? (string-ith str1 0 ))) (string-ith str2 0)) true]
 ; Separate and easier problem:
    ; What happens when str1 is one character long?  Does that make thing easier?
   
