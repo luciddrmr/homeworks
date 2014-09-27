@@ -22,11 +22,13 @@
   ; we need an expression that returns true iff. the first character of string1 and string2 are equivalent.
 ;     (equal? (substring str1 0 1) (substring str2 0 1))
 
+
+
 ; match-from-beginning? returns true iff. all of str1 appears as the beginning of str2.
 (define match-from-beginning? (lambda (str1 str2)
        (cond [ (equal? str1 "") false]
              [ (equal? str2 "") false]
-             [ INGENIOUS-BASE-CASE  false]
+             [ (not (equal? (string-ith str1 0) (string-ith str2 0) ) ) false]
              [ (and (equal? (string-length str1) 1) (equal? (string-ith str2 0) str1)) true ]
              [ else (match-from-beginning? (substring str1 1 (string-length str1))
                                      (substring str2 1 (string-length str2)))]))) 
