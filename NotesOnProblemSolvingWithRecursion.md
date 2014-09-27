@@ -11,6 +11,10 @@ One might even call these the design patterns of simple list-based programming p
      (Empty input could mean an error, or maybe it *is* a simple version of the problem we're trying to solve,
       which means we can use it as a base case.)
 
+      * If our goal is to return a boolean, we likely want two base cases: how do we quickly get done
+        and return false, and how do we quickly get done and return true.  This may not always exist,
+        but is always worth looking for.
+
    * Are there other base cases, or simple versions of the problem that we immediately know the solution
      to and should eliminate as special cases in the code?  If so, what is their result?
 
