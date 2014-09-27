@@ -1,4 +1,4 @@
 Homework
 ========
 
-Homeworks for Dr. Racket that I'm working on.
+Homeworks for Dr. Racket that I'm working on. Ain't I the coolest!
