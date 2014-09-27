@@ -11,14 +11,15 @@
 ;      t : string
 ;   Determines whether the first string appears literally in the second one. 
 
+"ab"
+"fjabutt"
 
 (define my-string-contains? (lambda (str1 str2)
   ; Probably we're done if there's no str2 left.
     (cond 
-         [ (equal? str2 "") false ]
-         [ 
-         [ else (my-string-contains? (substring str1 1 (string-length str1))
-                                     (substring str2 1 (string-length str2)))])))
+         [ (equal? str2 "") false ]        
+         [ (match-from-beginning?  str1 str2) true]
+         [ else (my-string-contains? str1 (substring str2 1 (string-length str2)))])))
   
  ;Sub problems:
   ; we need an expression that returns true iff. the first character of string1 and string2 are equivalent.
