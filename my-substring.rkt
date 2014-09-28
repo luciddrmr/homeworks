@@ -13,8 +13,8 @@
 
 (define my-substring-helper (lambda (str num1 num2)
         (cond  [ (equal? str "") ""]
-               [ 
-               [ else (cons (my-substring-helper (string-ith str 1))) ])))
+          [ 
+          [ else (cons (my-substring-helper (string-ith str 1))) ])))
 
 "Test 1"
 "ello"
@@ -31,3 +31,6 @@
 "Test 5"
 ""
 (my-substring "" 0 0)
+"Test 6"
+"my-substring: ending index is out of range"
+(my-substring "cat" 1 5)
