@@ -15,7 +15,7 @@
 (define my-substring-helper (lambda (str num1 num2)
         (cond  [ (equal? str "") ""]
           [ 
-          [ else (cons (my-substring-helper (string-ith str 1))) ])))
+          [ else (string (my-substring-helper (string-ith str 1))) ])))
 
 "Test 1"
 "ello"
