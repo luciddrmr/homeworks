@@ -10,8 +10,9 @@
          [ (and (equal? num1 0) (equal? num2 0)) ""]
         [ else (my-substring-helper str 0 0) ])))
 
-(define my-substring-helper (lambda (str count)
-        (cond  [ (equal? str "")]
+(define my-substring-helper (lambda (str num1 num2)
+        (cond  [ (equal? str "") ""]
+               [
                [ else (cons  (string-ith str 0)))) ])))
 
 "Test 1"
