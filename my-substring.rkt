@@ -17,10 +17,10 @@
 "ello"
 (my-substring "hello world" 1 5)
 "Test 2"
-"error: my-subtring expects a non-empty string"
+"my-substring: starting index is out of range"
 (my-substring "" 1 5)
 "Test 3"
-"error: requested substring is longer than string"
+"my-substring: starting index is out of range"
 (my-substring "c" 0 3)
 "Test 4"
 
