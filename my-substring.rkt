@@ -10,7 +10,11 @@
          [ (and (equal? num1 0) (equal? num2 0)) ""]
          [ (> (num2) (string-length str) "error: my-substring ending index is out of range" ]
          [ (equal? num1 num2) (string-ith str num1)]
-         [ else (implode (my-substring (string-ith str 1))) ])))
+         [else (my-substring-helper str 0)]
+
+(define my-substring-helper (lambda (str count)
+         (cond [ (                     
+        [ else (implode (my-substring-helper (string-ith str count))) ])))
 
 "Test 1"
 "ello"
