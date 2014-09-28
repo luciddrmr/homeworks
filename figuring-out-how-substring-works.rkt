@@ -11,5 +11,8 @@
 "error: requested substring is longer than string"
 (substring "c" 0 3)
 "Test 4"
-
+""
 (substring "cat in the hat" 0 0)
+"Test 5"
+""
+(substring "" 0 0)

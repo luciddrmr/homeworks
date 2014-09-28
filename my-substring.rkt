@@ -6,7 +6,7 @@
 ;  Not using substring, of course.
 
 (define my-substring (lambda (str num1 num2)
-       (cond   [ (equal? str "") (error "my-substring expects a non-empty string")]
+       (cond   [ (equal? str "") ONLY AN ERROR IF THE REQUESTED SUBSTRING IS NOT 0 0]
         [ else (my-substring-helper str 0 0) ])))
 
 (define my-substring-helper (lambda (str count)
@@ -23,7 +23,8 @@
 "my-substring: starting index is out of range"
 (my-substring "c" 0 3)
 "Test 4"
-
+""
 (my-substring "cat in the hat" 0 0)
-
-
+"Test 5"
+""
+(my-substring "" 0 0)
