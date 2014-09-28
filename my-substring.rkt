@@ -7,13 +7,23 @@
 
 (define my-substring (lambda (str num1 num2)
        (cond   [ (equal? str "") (error "my-substring expects a non-empty string")]
-        [ else (my-substring-helper str 0) ])))
+        [ else (my-substring-helper str 0 0) ])))
 
 (define my-substring-helper (lambda (str count)
         (cond  [ (equal? str "") empty]
                [ else (cons  (string-ith str 0)))) ])))
 
+"Test 1"
+"ello"
 (my-substring "hello world" 1 5)
+"Test 2"
+"error: my-subtring expects a non-empty string"
 (my-substring "" 1 5)
+"Test 3"
+"error: requested substring is longer than string"
+(my-substring "c" 0 3)
+"Test 4"
+
+(my-substring "cat in the hat" 0 0)
 
 
