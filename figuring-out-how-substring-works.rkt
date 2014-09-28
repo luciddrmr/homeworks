@@ -16,3 +16,7 @@
 "Test 5"
 ""
 (substring "" 0 0)
+
+"Test 6"
+;Should this be an error?
+(substring "cat" 1 5)
