@@ -8,14 +8,14 @@
 (define my-substring (lambda (str num1 num2)
        (cond   [ (equal? str "") ONLY AN ERROR IF THE REQUESTED SUBSTRING IS NOT 0 0]
          [ (and (equal? num1 0) (equal? num2 0)) ""]
-         [ (> (num2) (string-length str) "error: my-substring ending index is out of range" ]
+         [ (> (num2) (string-length str) "error: my-substring ending index is out of range") ]
          [ (equal? num1 num2) (string-ith str num1)]
          [else (my-substring-helper str (string-ith num1) (string-ith num2))]
 
 (define my-substring-helper (lambda (str num1 num2)
          (cond [ (equal? num2)]      
          [ 
-         [ else (implode (my-substring-helper str (+ 1 (string-ith num1)) (string-ith num2))) ])))
+         [ else (implode (my-substring-helper str (+ 1 (string-ith num1)) (string-ith num2))) ]])))
 
 "Test 1"
 "ello"
