@@ -13,7 +13,7 @@
          [else (my-substring-helper str 0)]
 
 (define my-substring-helper (lambda (str num1 num2)
-         (cond [ (                     
+         (cond [ (equal? num2                    
         [ else (implode (my-substring-helper str (+ 1 (string-ith num1)) (string-ith num2))) ])))
 
 "Test 1"
