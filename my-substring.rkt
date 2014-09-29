@@ -12,9 +12,9 @@
          [ (equal? num1 num2) (string-ith str num1)]
          [else (my-substring-helper str 0)]
 
-(define my-substring-helper (lambda (str count)
+(define my-substring-helper (lambda (str num1 num2)
          (cond [ (                     
-        [ else (implode (my-substring-helper (string-ith str count))) ])))
+        [ else (implode (my-substring-helper str (string-ith num1) (string-ith num2))) ])))
 
 "Test 1"
 "ello"
