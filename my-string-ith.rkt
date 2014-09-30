@@ -7,7 +7,7 @@
 (define my-string-ith (lambda (str num)
      (cond  [ (equal? 0 (string-length str)) str ]
             [  ]
-            [ else (my-string-ith str num)]))
+            [ else (my-string-ith-helper str num)]))
 
 (define my-string-ith-helper (lambda (str num)
         (cond  [ test base-case ]
