@@ -4,12 +4,12 @@
 ;Write your own recursive version of string-ith.   Not using string-ith
 ;of course.
 
-(define my-string-ith (lambda (str num1)
+(define my-string-ith (lambda (str num)
      (cond  [ (equal? 0 (string-length str)) str ]
-            [ test2 another-base-case ]
-            [ else (my-function-helper arg1 arg2 arg3)]))
+            [  ]
+            [ else (my-string-ith-helper str num)]))
 
-(define my-string-ith-helper (lambda (arg1 arg2 arg3)
+(define my-string-ith-helper (lambda (str num)
         (cond  [ test base-case ]
                [ test2 another-base-case ]
                [ else recursion-expression ]))))
