@@ -1,4 +1,4 @@
-Homework
+Problem Sets in Dr. Racket
 ========
 
-Homeworks for Dr. Racket that I'm working on. Ain't I the coolest!
+Problem sets for Dr. Racket that I'm working on. All code is written in Scheme. 
