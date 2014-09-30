@@ -5,7 +5,9 @@
 ;of course.
 
 (define my-string-ith (lambda (str num1)
-    (my-function-helper arg1 arg2 arg3)))
+     (cond  [ (equal? 0 (string-length str)) str ]
+            [ test2 another-base-case ]
+            [ else (my-function-helper arg1 arg2 arg3)]))
 
 (define my-string-ith-helper (lambda (arg1 arg2 arg3)
         (cond  [ test base-case ]
