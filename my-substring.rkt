@@ -14,7 +14,8 @@
 
 (define my-substring-helper (lambda (str num1 num2)
    (cond [ (equal? I DONT KNOW WHAT THIS VALUE IS num2) THEN YOURE DONE]      
-         [ else (implode (my-substring-helper str (string-ith str num1) (string-ith str num2))) ])))
+         [ else (implode (my-substring-helper str (string-ith str num1) (string-ith str num2)))
+         ])))
 
 "Test 1"
 "ello"
