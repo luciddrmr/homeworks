@@ -15,13 +15,19 @@
            [ else (my-string-ith-helper str (substring str num (+1 num)) ]))))
 
 "Test 1"
-(string-ith "cat" 0)
+(my-string-ith "cat" 0)
 
 "Test 2"
-(string-ith "hamburger" 10)
+(my-string-ith "hamburger" 10)
 
 "Test 3"
-(string-ith "" 0)
+(my-string-ith "" 0)
 
 "Test 4"
-(string-ith "" 2)
+(my-string-ith "" 2)
+
+"Test 5"
+(my-string-ith "h" 1)
+
+"Test 6"
+(my-string-ith "h" 0)
