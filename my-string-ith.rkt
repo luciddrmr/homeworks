@@ -10,7 +10,7 @@
            [ else (my-string-ith-helper str)]))
 
 (define my-string-ith-helper (lambda (str)
-    (cond  [ test base-case ]
+    (cond  [ (equal? 1 (string-length str)) (substring str 1 2) ]
            [ test2 another-base-case ]
            [ else (my-string-ith-helper str (substring str num (+1 num)) ]))))
 
