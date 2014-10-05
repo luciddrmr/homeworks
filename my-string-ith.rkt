@@ -7,12 +7,12 @@
 (define my-string-ith (lambda (str num)
     (cond  [ (equal? 0 (string-length str)) str ]
            [ (equal? 0 num) (substring str 0 1 ) ]
-           [ else (my-string-ith-helper str num)]))
+           [ else (my-string-ith-helper str)]))
 
-(define my-string-ith-helper (lambda (str num)
+(define my-string-ith-helper (lambda (str)
     (cond  [ test base-case ]
            [ test2 another-base-case ]
-           [ else (my-string-ith-helper str num) ]))))
+           [ else (my-string-ith-helper str (substring str num (+1 num)) ]))))
 
 "Test 1"
 (string-ith "cat" 0)
