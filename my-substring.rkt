@@ -13,11 +13,13 @@
          [ (equal? num1 num2) (string-ith str num1)]
          [else (my-substring-helper str (string-ith num1) (string-ith num2) 0)])))
 
-(define my-substring-helper (lambda (str num1 num2 count)
-   (cond [ (equal? num2 count) THEN YOURE DONE]   
+(define my-substring-helper (lambda (str num1 num2)
+   (cond [ (equal? num2 num1) ""]   
          [ ]
          [ else (implode (my-substring-helper str (string-ith str num1) (string-ith str num2) (+ 1 count)))
          ])))
+
+(my-substring "hello world" 0 0)
 
 "Test 1"
 "ello"
