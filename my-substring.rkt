@@ -15,8 +15,8 @@
 
 (define my-substring-helper (lambda (str num1 num2)
    (cond [ (equal? num2 num1) (string-ith str num2)]   
-         [ else (string-append 
-                (my-substring-helper str (+ 1 num1) num2) (string-ith str (- num1 1)) ]
+         [ else (string-append (string-ith str (- num1 1))
+                (my-substring-helper str (+ 1 num1) num2))  ]
          )))
 
 (my-substring "hello world" 0 0)
