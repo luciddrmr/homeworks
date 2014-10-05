@@ -8,21 +8,21 @@
 (define my-substring (lambda (str num1 num2)
    (cond [ (and (equal? num1 0) (equal? num2 0)) ""]
          [ (equal? str "") str]
-         [ (equal? num2 (< (num2) (string-length str))) "error: my-substring ending index is out of range" ]
-         [ (and (equal? str "") ;(< 0 num1)) "error: my-substring starting index is out of range"]
+         [ (equal? num2 (< num2 (string-length str))) "error: my-substring ending index is out of range" ]
+;         [ (and (equal? str "") ;(< 0 num1)) "error: my-substring starting index is out of range"]
          [ (equal? num1 num2) (string-ith str num1)]
-         [else (my-substring-helper str (string-ith num1) (string-ith num2) 0)])))
+         [else (my-substring-helper str num1 num2) ])))
 
 (define my-substring-helper (lambda (str num1 num2)
    (cond [ (equal? num2 num1) ""]   
-         [ ]
-         [ else (implode (my-substring-helper str (string-ith str num1) (string-ith str num2) (+ 1 count)))
-         ])))
+         [ else (string-append 
+                (my-substring-helper str (+ 1 num1) num2) (string-ith str (- num1 1)) (string-ith str num2)) ]
+         )))
 
 (my-substring "hello world" 0 0)
 
 "Test 1"
-"ello"
+"Answer: ello"
 (my-substring "hello world" 1 5)
 "Test 2"
 "my-substring: starting index is out of range"
