@@ -6,7 +6,7 @@
 
 (define my-string-ith (lambda (str num)
     (cond  [ (equal? 0 (string-length str)) str ]
-           [  ]
+           [ (equal? 0 num) (substring str 0 0) ]
            [ else (my-string-ith-helper str num)]))
 
 (define my-string-ith-helper (lambda (str num)
