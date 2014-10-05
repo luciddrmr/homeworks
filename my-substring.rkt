@@ -15,7 +15,7 @@
 
 (define my-substring-helper (lambda (str num1 num2 count)
    (cond [ (equal? num2 count) THEN YOURE DONE]   
-         
+         [ ]
          [ else (implode (my-substring-helper str (string-ith str num1) (string-ith str num2) (+ 1 count)))
          ])))
 
