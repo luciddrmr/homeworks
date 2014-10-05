@@ -44,6 +44,8 @@ One might even call these the design patterns of simple list-based programming p
    * When you're stuck, maybe solve a narrower problem and examine its solution to see if it informs
      a solution for the main problem.
 
+   * When there's an operation you only want to do *once*, it definitely shouldn't be put in the recursive
+     step (i.e., inside the loop).
 
      * Then, consider: "What's different, or more complicated, when you move to the bigger problem?"
        "Which one of our base cases becomes no longer a base case?"
