@@ -35,7 +35,12 @@ One might even call these the design patterns of simple list-based programming p
      For example, do we need to cons an element (modified) onto our new list output and make the cdr
      the recursion?  [i.e., tail recursion]
 
+   * It's not uncommon for the number of base cases to be the same (or sometimes one more) than the number
+     of inputs.
    
+   * The more input variables you have, the more likely one of those is the one you can use as part
+     of the recursion.
+
    * When you're stuck, maybe solve a narrower problem and examine its solution to see if it informs
      a solution for the main problem.
 
