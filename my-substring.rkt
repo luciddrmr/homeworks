@@ -14,22 +14,20 @@
          [else (my-substring-helper str num1 num2) ])))
 
 (define my-substring-helper (lambda (str num1 num2)
-   (cond [ (equal? num2 num1) (string-ith str num2)]   
+   (cond [ (equal? num2 num1) ""]   
          [ else (string-append (string-ith str num1)
                 (my-substring-helper str (+ 1 num1) num2))  ]
          )))
+
+
+; Another possible solution approach: what if you wrote two recursive helper functions, one of which just got num1
+;  down to 0, and then did the equivalent of n-chars-of-beginning-of-str from thereafter.
 
 (my-substring "hello world" 0 0)
 
 "Test 1"
 "Answer: ello"
-(my-substring "hello world" 1 5)
-"Test 2"
-"my-substring: starting index is out of range"
-(my-substring "" 1 5)
-"Test 3"
-"my-substring: starting index is out of range"
-(my-substring "c" 0 3)
+(my-substring "hello world" 0 1)
 "Test 4"
 ""
 (my-substring "cat in the hat" 0 0)
@@ -39,3 +37,9 @@
 "Test 6"
 "my-substring: ending index is out of range"
 (my-substring "cat" 1 5)
+"Test 2"
+"my-substring: starting index is out of range"
+(my-substring "" 1 5)
+"Test 3"
+"my-substring: starting index is out of range"
+(my-substring "c" 0 3)
